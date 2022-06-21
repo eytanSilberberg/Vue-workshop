@@ -1,8 +1,24 @@
-body {
-    background-color: #fdfcdc;
-    margin: 0;
-}
+// SETUP
+@import './setup/typography';
+@import './setup/variables';
+@import './setup/mixins';
+@import './setup/functions';
 
-* {
-    box-sizing: border-box;
-}
+//BASICS
+@import './basic/helpers';
+@import './basic/base';
+@import './basic/layout';
+
+
+//PAGES
+@import './pages/home';
+@import './pages/contact.scss';
+@import './pages/contact-details.scss';
+
+// CMPS
+
+@import'./cmps/app-header.scss';
+
+// CMPS -CONTACTS
+
+@import'./cmps/contact/contact-list.scss'

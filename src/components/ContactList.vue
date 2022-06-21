@@ -1,18 +1,23 @@
 <template>
   <div class="contact-list">
-    <span>img</span>
-    <span>Name</span>
-    <span>Email</span>
-    <span>Phone number</span>
-    <span>Actions</span>
-  </div>
-  <div
-    :key="contact._id"
-    v-for="contact in contacts"
-    @click="onGoTo(contact._id)"
-  >
-    <ContactPreview :contact="contact" />
-    <button @click.stop="removeContact(contact._id)">X</button>
+    <div class="list-titles-wrapper">
+      <span class="img-column">img</span>
+      <span>Name</span>
+      <span>Email</span>
+      <span>Phone number</span>
+      <span>Actions</span>
+    </div>
+    <div
+      class="contact-wrapper"
+      :key="contact._id"
+      v-for="contact in contacts"
+      @click="onGoTo(contact._id)"
+    >
+      <ContactPreview :contact="contact" />
+      <button class="action-button" @click.stop="removeContact(contact._id)">
+        X
+      </button>
+    </div>
   </div>
 </template>
 <script>
@@ -40,10 +45,4 @@ export default {
 </script>
 
 <style lang="scss">
-.contact-list {
-  display: flex;
-  span {
-    min-width: 200px;
-  }
-}
 </style>

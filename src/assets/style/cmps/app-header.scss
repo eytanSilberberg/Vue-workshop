@@ -1,0 +1,10 @@
+nav {
+    grid-column: 1 /-1;
+    padding-left: $large-screen-padding ;
+    padding-right: $large-screen-padding ;
+    background-color: $secondary-pages-clr;
+
+    a:not(.last-link) {
+        margin-inline-end: 20px;
+    }
+}

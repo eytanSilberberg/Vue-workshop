@@ -1,5 +1,5 @@
 <template>
-  <section class="contact-app">
+  <section class="contact-page">
     <contact-filter @set-filter="onFilter" />
     <h1>Contact list</h1>
     <router-link to="/contact/edit">Add a new contact</router-link>

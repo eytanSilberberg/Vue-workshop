@@ -1,10 +1,8 @@
 <template>
-  <div>
-    <img :src="`https://robohash.org/set=set2&name=${contact.name}`" alt="" />
-    <h1>{{ contact.name }}</h1>
-    <span>{{ contact.email }}</span>
-    <span> {{ contact.phone }}</span>
-  </div>
+  <img :src="`https://robohash.org/set=set2&name=${contact.name}`" alt="" />
+  <h1>{{ contact.name }}</h1>
+  <span>{{ contact.email }}</span>
+  <span> {{ contact.phone }}</span>
 </template>
 
 <script>
@@ -24,13 +22,4 @@ export default {
 </script>
 
 <style lang="scss">
-div {
-  display: flex;
-  & > *:not(img) {
-    min-width: 200px;
-  }
-  img {
-    width: 200px;
-  }
-}
 </style>

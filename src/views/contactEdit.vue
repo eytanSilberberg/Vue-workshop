@@ -2,7 +2,7 @@
   <h1>Contact Edit</h1>
   <form v-if="contact" @submit.prevent="save" class="contact-edit">
     <input v-model="contact.name" type="text" />
-    <input v-model.number="contact.phone" type="phone" />
+    <input v-model="contact.phone" type="phone" />
     <input v-model="contact.email" type="email" />
     <button>Save</button>
   </form>

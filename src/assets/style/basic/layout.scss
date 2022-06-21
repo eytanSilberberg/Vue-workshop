@@ -1,0 +1,6 @@
+.app-wrapper {
+    display: grid;
+    margin: 0;
+    grid-template-columns: $large-screen-padding 1fr $large-screen-padding;
+    width: 100%;
+}

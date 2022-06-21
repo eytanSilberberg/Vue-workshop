@@ -15,14 +15,4 @@ export default {
 </script>
 
 <style lang="scss">
-.app-wrapper {
-  display: grid;
-  margin: 0;
-  grid-template-columns: 20px 1fr 20px;
-  width: 100%;
-}
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
 </style>

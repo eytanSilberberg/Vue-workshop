@@ -1,0 +1,48 @@
+.contact-details {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: 30px 1fr 30px;
+        padding-top: 30px;
+        background-color: antiquewhite;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        width: 800px;
+
+        .info-wrapper {
+            grid-column: 2/3;
+            text-align: center;
+        }
+
+        .card-header {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .contact-name {}
+    }
+
+    // h1 {
+    //     margin-left: $large-screen-padding;
+    // }
+
+    .txt-info-wrapper {
+        &>* {
+            margin-block-end: 20px;
+        }
+    }
+
+    .button-wrapper {
+        margin-bottom: 30px;
+    }
+
+    // .button-wrapper {
+    //     margin-left: $large-screen-padding;
+    // }
+}
