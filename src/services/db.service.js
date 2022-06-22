@@ -38,15 +38,9 @@ async function remove(collectionName, id) {
 
 async function post(collectionName, item) {
     var collection = await query(collectionName) || []
-
-    console.log(collection)
-
     item[ID_FIELD] = utilService.makeId()
-    item['coins'] = utilService.getRandomInt(0, 1000)
-    const bitCoinValue = await bitCoinService.getRate(item.coins)
-    item.btc = bitCoinValue
-    collection.push(item)
-
+    collection.push({ ...item })
+    console.log(collection)
     storageService.save(collectionName, collection)
     return Promise.resolve(item)
 }

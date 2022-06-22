@@ -3,6 +3,8 @@ nav {
     padding-left: $large-screen-padding ;
     padding-right: $large-screen-padding ;
     background-color: $secondary-pages-clr;
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     a:not(.last-link) {
         margin-inline-end: 20px;

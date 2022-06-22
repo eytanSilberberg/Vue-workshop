@@ -1,14 +1,18 @@
 'use strict'
 
 import { dbService } from './db.service.js'
+import { bitCoinService } from './bitcoinService.js'
+import { utilService } from './util.service'
 
-const KEY = 'users'
+const KEY = 'user'
 export const userService = {
     query,
     get,
     remove,
     getUser,
     getEmptyuser,
+    getLoggedinUser,
+    logout,
 }
 
 async function query() {
@@ -32,13 +36,31 @@ async function remove(id) {
 
 async function getUser(user) {
     if (user._id) return await dbService.put(KEY, user)
-    else return await dbService.post(KEY, user)
+    else {
+        user['coins'] = utilService.getRandomInt(0, 1000)
+        const bitCoinValue = await bitCoinService.getRate(user.coins)
+        user.btc = bitCoinValue
+        user.transactions = []
+        await dbService.post(KEY, user)
+    }
+    return
 }
 
 function getEmptyuser() {
     return {
         name: ''
     }
+}
+function getLoggedinUser() {
+    let loggedInUser = localStorage.getItem(KEY)
+    loggedInUser = JSON.parse(loggedInUser)
+    console.log(loggedInUser)
+    if (!loggedInUser) return
+    return loggedInUser[0]
+}
+
+async function logout() {
+    localStorage.clear(KEY)
 }
 
 function _createDefaultusers() {

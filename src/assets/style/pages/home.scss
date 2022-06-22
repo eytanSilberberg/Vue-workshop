@@ -2,15 +2,32 @@
     grid-column: 2/3;
     gap: 100px;
 
-    .introduction-wrapper {
+    .content-holder {
         flex-direction: column;
-        justify-content: center;
+        margin-top: 150px;
 
-        h1 {
-            font-size: 40px;
-            margin: 0;
-            font-style: italic;
+        .content-wrapper {
+            background-color: antiquewhite;
+            padding: 30px;
+            border-radius: 15px;
 
         }
+
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        button,
+        a {
+            @include btn;
+            align-self: flex-start;
+        }
+
+
+
     }
 }

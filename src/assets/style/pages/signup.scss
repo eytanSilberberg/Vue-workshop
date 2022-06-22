@@ -1,0 +1,45 @@
+.introduction-wrapper {
+    inset: 0;
+    text-align: center;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8888884d;
+    padding-top: 100px;
+
+
+    // h1 {
+    //     font-size: 40px;
+    //     margin: 0;
+    //     font-style: italic;
+    //     background-color: $primary-pages-clr;
+    //     width: 50%;
+    // }
+
+    // form {
+    //     background-color: $primary-pages-clr;
+    //     width: 50%;
+    // }
+    .welcome-section {
+        border-radius: 15px;
+        width: 50%;
+        background-color: $primary-pages-clr;
+        padding-top: 20px;
+
+        h1 {
+            font-size: 40px;
+            border-bottom: 1px solid #8888884d;
+            margin: 0 10px 30px;
+        }
+
+        form {
+            label {
+                font-size: 20px;
+            }
+
+            margin-bottom: 20px;
+
+        }
+
+    }
+}
